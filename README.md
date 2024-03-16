@@ -1,4 +1,8 @@
-# Getting Started with Create React App
+# Snap Code Landing Page
+
+This is Snap Code's landing page!
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
