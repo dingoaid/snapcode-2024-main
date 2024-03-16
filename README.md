@@ -1,4 +1,4 @@
-#Snap Code Landing Page
+# Snap Code Landing Page
 
 This is Snap Code's landing page!
 
