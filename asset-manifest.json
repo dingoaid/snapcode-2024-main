@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/snapcode-2024-main/static/css/main.22c81834.css",
+    "main.js": "/snapcode-2024-main/static/js/main.fc2f1457.js",
+    "static/media/snapcodelogo.png": "/snapcode-2024-main/static/media/snapcodelogo.de7cb85433dca4a254ed.png",
+    "index.html": "/snapcode-2024-main/index.html",
+    "main.22c81834.css.map": "/snapcode-2024-main/static/css/main.22c81834.css.map",
+    "main.fc2f1457.js.map": "/snapcode-2024-main/static/js/main.fc2f1457.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.22c81834.css",
+    "static/js/main.fc2f1457.js"
+  ]
+}
