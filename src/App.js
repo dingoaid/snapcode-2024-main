@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import "./App.css";
 import userImage from './user-image.png';
 import animation1 from './animation1.mp4';
 import codeText from './code-in-text.mp4';
-
+import exampleBg from './example-background.png';
 
 function App() {
 
@@ -15,29 +15,46 @@ function App() {
 
     // Fixed navbar logic
     const handleScroll = () => {
-      const navbar = document.querySelector('.Navbar');
-      const logoContainer = document.querySelector('.logo-container');
+      const navbar = document.querySelector(".Navbar");
+      const logoContainer = document.querySelector(".logo-container");
       const logoContainerBottom = logoContainer.offsetTop + logoContainer.offsetHeight;
 
       if (document.documentElement.scrollTop >= logoContainerBottom) {
-        navbar.classList.add('fixed-navbar');
+        navbar.classList.add("fixed-navbar");
       } else {
-        navbar.classList.remove('fixed-navbar');
+        navbar.classList.remove("fixed-navbar");
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     // Clean up function to remove event listener
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const [showImage, setShowImage] = useState(true);
-  const [buttonText, setButtonText] = useState("SnapCode!");
+  const [buttonText, setButtonText] = useState("SnapCode! →");
 
   const toggleMedia = () => {
     setShowImage(!showImage);
-    setButtonText(showImage ? "Original Image" : "SnapCode!");
+    setButtonText(showImage ? "Original Image →" : "SnapCode! →");
+  
+    const videoElement = document.querySelector(".media-container video");
+    if (videoElement) {
+      if (!showImage) {
+        videoElement.play();
+      } else {
+        videoElement.pause();
+        videoElement.currentTime = 0; // Optionally reset video to start
+      }
+    }
+  }
+
+  const scrollToNewSection = () => {
+    const section = document.querySelector(".new-section");
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
   };
 
   return (
@@ -64,23 +81,33 @@ function App() {
         <div className="right-column">
           <h1>Image to Code in Seconds</h1>
           <p>Transform your images into executable code with just a few clicks. Experience the magic of automation.</p>
-          <button>Try Now</button>
+          <button className="button" onClick={scrollToNewSection}>Try Now</button>
         </div>
       </main>
       <section className="new-section">
         <h1>You know all those great images you have? Just leave the coding part for us. We got you covered.</h1>
-        <div className="media-container">
-        {showImage ? <img src={userImage} alt="User's creation" /> : 
-            <video autoPlay loop muted>
-              <source src={codeText} type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          }
-          <button onClick={toggleMedia} 
+        <div className="media-container" 
+          style={{ 
+            backgroundImage: `url(${exampleBg})`, 
+            backgroundSize: "101%", 
+            backgroundPosition: "center center",
+            backgroundRepeat: "no-repeat"
+          }}>
+          <div className="media">
+            {showImage ? <img src={userImage} alt="User's creation" /> : 
+              <video autoPlay loop muted>
+                <source src={codeText} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            }
+          </div>
+          <button onClick={toggleMedia} className="button" 
             style={{ 
-              backgroundColor: '#31A094', 
-              color: 'black', 
-              fontFamily: 'inherit' }}>
+              backgroundColor: "black", 
+              color: "white", 
+              fontFamily: "inherit",
+              marginTop: "20px" 
+            }}>
             {buttonText}
           </button>
         </div>

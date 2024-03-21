@@ -145,6 +145,7 @@ body {
   padding: 23px 30px;
   cursor: pointer;
   margin-top: 20px;
+  transition: transform 0.1s ease;
 }
 
 /* Example Section */
@@ -173,22 +174,50 @@ body {
 
 .media-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 10%;
   width: 90%;
+  min-height: 440px;
+}
+
+.media {
+  transition: opacity 0.5s ease-in-out;
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.media.hide { 
+  opacity: 0;
 }
 
 .media-container img {
   display: flex;
   justify-content: center;
-  width: 20%;
-  height: 20%;
+  width: 25%;
+  height: 25%;
 }
 
 .media-container video {
-  width: 15%;
+  width: 18%;
   height: auto;
+}
+
+.media-container button{
+  border: none;
+  padding: 18px 26px;
+  font-size: clamp(18px, 2vw, 25px);
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: transform 0.1s ease;
+}
+
+.button:active {
+  transform: scale(0.95);
 }
 
 /* Waitlist Section */
