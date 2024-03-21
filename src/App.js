@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import userImage from './user-image.png';
 import animation1 from './animation1.mp4';
@@ -32,19 +32,13 @@ function App() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
-  const videoRef = useRef(null);
+  const [showImage, setShowImage] = useState(true);
+  const [buttonText, setButtonText] = useState("SnapCode!");
 
-  // Function to toggle video play/pause
-  const toggleVideoPlay = () => {
-    if (isVideoPlaying) {
-      videoRef.current.pause();
-    } else {
-      videoRef.current.play();
-    }
-    setIsVideoPlaying(!isVideoPlaying);
+  const toggleMedia = () => {
+    setShowImage(!showImage);
+    setButtonText(showImage ? "Original Image" : "SnapCode!");
   };
-
 
   return (
     <div className="App">
@@ -76,12 +70,19 @@ function App() {
       <section className="new-section">
         <h1>You know all those great images you have? Just leave the coding part for us. We got you covered.</h1>
         <div className="media-container">
-          <img src={userImage} alt="User's creation" />
-          <button onClick={toggleVideoPlay}>SnapCode!</button>
-          <video ref={videoRef} autoPlay loop muted>
-            <source src={codeText} type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
+        {showImage ? <img src={userImage} alt="User's creation" /> : 
+            <video autoPlay loop muted>
+              <source src={codeText} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          }
+          <button onClick={toggleMedia} 
+            style={{ 
+              backgroundColor: '#31A094', 
+              color: 'black', 
+              fontFamily: 'inherit' }}>
+            {buttonText}
+          </button>
         </div>
       </section>
       <section className="waitlist-section">
