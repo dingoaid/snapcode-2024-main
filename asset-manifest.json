@@ -1,14 +1,17 @@
 {
   "files": {
-    "main.css": "/snapcode-2024-main/static/css/main.22c81834.css",
-    "main.js": "/snapcode-2024-main/static/js/main.fc2f1457.js",
+    "main.css": "/snapcode-2024-main/static/css/main.5a244e88.css",
+    "main.js": "/snapcode-2024-main/static/js/main.15c861b8.js",
+    "static/media/code-in-text.mp4": "/snapcode-2024-main/static/media/code-in-text.2d65bdd18eaaeef7a56b.mp4",
+    "static/media/user-image.png": "/snapcode-2024-main/static/media/user-image.3a2991d9fdabaa818639.png",
     "static/media/snapcodelogo.png": "/snapcode-2024-main/static/media/snapcodelogo.de7cb85433dca4a254ed.png",
+    "static/media/animation1.mp4": "/snapcode-2024-main/static/media/animation1.5b64cad8def73b1d379d.mp4",
     "index.html": "/snapcode-2024-main/index.html",
-    "main.22c81834.css.map": "/snapcode-2024-main/static/css/main.22c81834.css.map",
-    "main.fc2f1457.js.map": "/snapcode-2024-main/static/js/main.fc2f1457.js.map"
+    "main.5a244e88.css.map": "/snapcode-2024-main/static/css/main.5a244e88.css.map",
+    "main.15c861b8.js.map": "/snapcode-2024-main/static/js/main.15c861b8.js.map"
   },
   "entrypoints": [
-    "static/css/main.22c81834.css",
-    "static/js/main.fc2f1457.js"
+    "static/css/main.5a244e88.css",
+    "static/js/main.15c861b8.js"
   ]
 }
