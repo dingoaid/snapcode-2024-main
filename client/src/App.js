@@ -56,11 +56,11 @@ function App() {
       section.scrollIntoView({ behavior: "smooth", block: "center" });
     }
   };
-
+  // 제출할때 이렇게 동작하면되 
   const handleSubmit = async (event) => {
     event.preventDefault();
     const email = event.target.email.value;
-    
+    // 내가 받은정보 = email => 보낸다!
     try {
       const response = await fetch('http://localhost:5001/submit-email', {
         method: 'POST',
