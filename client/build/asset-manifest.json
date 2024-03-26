@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/snapcode-2024-main/static/css/main.8b6f6d7c.css",
+    "main.js": "/snapcode-2024-main/static/js/main.5f386805.js",
+    "static/media/code-in-text.mp4": "/snapcode-2024-main/static/media/code-in-text.2d65bdd18eaaeef7a56b.mp4",
+    "static/media/user-image.png": "/snapcode-2024-main/static/media/user-image.3a2991d9fdabaa818639.png",
+    "static/media/snapcodelogo.png": "/snapcode-2024-main/static/media/snapcodelogo.de7cb85433dca4a254ed.png",
+    "static/media/animation1.mp4": "/snapcode-2024-main/static/media/animation1.5b64cad8def73b1d379d.mp4",
+    "static/media/example-background.png": "/snapcode-2024-main/static/media/example-background.93b6c829629269318c17.png",
+    "index.html": "/snapcode-2024-main/index.html",
+    "main.8b6f6d7c.css.map": "/snapcode-2024-main/static/css/main.8b6f6d7c.css.map",
+    "main.5f386805.js.map": "/snapcode-2024-main/static/js/main.5f386805.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8b6f6d7c.css",
+    "static/js/main.5f386805.js"
+  ]
+}
