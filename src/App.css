@@ -153,7 +153,7 @@ body {
 .new-section {
   background-color: white;
   padding: 40px;
-  width: 99vw;
+  width: 99%;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -169,6 +169,7 @@ body {
   text-align: center;
   font-size: clamp(24px, 2vw, 30px);
   font-weight: 400;
+  margin-bottom: 2%;
   width: 50%;
 }
 

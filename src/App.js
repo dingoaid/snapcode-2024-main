@@ -57,6 +57,29 @@ function App() {
     }
   };
 
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    const email = event.target.email.value;
+    
+    try {
+      const response = await fetch('http://localhost:5001/sunmit-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ address: email }),
+      });
+      if (response.ok) {
+        alert('Email submitted successfully!');
+      } else {
+        alert('Failed to submit email.');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      alert('Error submitting email.');
+    }
+  };
+
   return (
     <div className="App">
       <header className="App-header">
@@ -114,10 +137,10 @@ function App() {
       </section>
       <section className="waitlist-section">
         <h2>Join the waitlist if you would like to use SnapCode and get the latest news!</h2>
-        <div className="waitlist-form">
-          <input type="email" placeholder="Your Email Address" />
+        <form className="waitlist-form" onSubmit={handleSubmit}>
+          <input type="email" name="email" placeholder="Your Email Address" />
           <button type="submit"><span>Submit</span></button>
-        </div>
+        </form>
       </section>
     </div>
   );
